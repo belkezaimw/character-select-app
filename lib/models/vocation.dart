@@ -43,3 +43,4 @@ enum Vocation {
   final String ability;
   
 }
+
