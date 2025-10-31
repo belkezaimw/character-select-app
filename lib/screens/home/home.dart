@@ -3,7 +3,7 @@ import 'package:flutter_rpg/screens/home/charachter_card.dart';
 import 'package:flutter_rpg/shared/styled_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
 import 'package:flutter_rpg/models/character.dart';
-
+import 'package:flutter_rpg/screens/create/create.dart';
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -29,16 +29,23 @@ class _HomeState extends State<Home> {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: characters.length,
+                itemCount: character.length,
+                physics: AlwaysScrollableScrollPhysics(),
                 itemBuilder: (_,index){
-                  return CharacterCard(characters[index]);
+                  return CharacterCard(character[index]);
                 },
               
               ),
             ),
             
         
-            StyledButton(onPressed:(){},child: StyledHeading("create new"), )
+            StyledButton(onPressed:(){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: 
+                  (ctx)=> Create()));
+            },child: StyledHeading("create new"), )
 
           ],
         ),
