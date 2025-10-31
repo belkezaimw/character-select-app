@@ -1,9 +1,7 @@
-import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:flutter_rpg/screens/home/charachter_card.dart';
 import 'package:flutter_rpg/shared/styled_button.dart';
 import 'package:flutter_rpg/shared/styled_text.dart';
-import 'package:flutter_rpg/theme.dart';
 import 'package:flutter_rpg/models/character.dart';
 
 class Home extends StatefulWidget {
@@ -31,9 +29,9 @@ class _HomeState extends State<Home> {
           children: [
             Expanded(
               child: ListView.builder(
-                itemCount: character.length,
+                itemCount: characters.length,
                 itemBuilder: (_,index){
-                  return CharacterCard(character[index]);
+                  return CharacterCard(characters[index]);
                 },
               
               ),

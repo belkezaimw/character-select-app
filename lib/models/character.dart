@@ -40,7 +40,7 @@ skills.add(skill);
 }
 
 
-List <Character> character = [
+List <Character> characters = [
   Character(id: "1",name: "klara",vocation: Vocation.wizard,slogon: "kaboooom"),
   Character(id: '2', name: 'Jonny', vocation: Vocation.junkie, slogon: 'Light me up...'),
   Character(id: '3', name: 'Crimson', vocation: Vocation.raider, slogon: 'Fire in the hole!'),
